@@ -8,7 +8,7 @@
 function  Convert-NSDID {
     [CmdletBinding()]
     Param(
-        [Parameter(Mandatory = $true)][string]$did,
+        [Parameter(Mandatory = $true, ValueFromPipeline, Position = 0)][string]$did,
         [Parameter(Mandatory = $false)][switch]$e164
     )
     # Remove special characters from DID
