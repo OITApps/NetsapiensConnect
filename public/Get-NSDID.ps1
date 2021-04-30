@@ -44,7 +44,7 @@ function  Get-NSDID {
         try {
             $res = Invoke-NSRequest $payload
             if ($res.count -gt 0) {
-                return $res
+                return $res.total
             }
             else {
                 $res = "Error retrieving data or no data returned"
